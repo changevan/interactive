@@ -50,6 +50,7 @@ h2{
 #footnote {
   position: fixed;
   color: black;
+  max-width:400px;
   padding: 1em;
   font-size: 30px;
   left:1em;

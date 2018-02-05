@@ -51,9 +51,8 @@ body{
 
 
 a,a:hover, a:link, a:active, a:focus, a:visited {
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
-		text-decoration-style: solid;
 }
 
 .content {
