@@ -1,0 +1,146 @@
+body {
+  font-size: 30px;
+  font-family:'Cormorant Garamond', serif;
+  word-spacing: 2px;
+  font-weight: 500;
+}
+
+
+h2{
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#prelude{
+  font-style: italic;
+}
+
+#portrait{
+  float: left;
+  top: 1em;
+  right: 1em;
+  max-width: 37%;
+}
+
+#table-of-contents {
+  position: fixed;
+  max-width: 400px;
+  top: 14.5em;
+  left: 1em;
+  color: black;
+  font-size: 30px;
+}
+
+#table-of-contents a {
+  color: Black;
+  text-decoration: none;
+}
+
+#table-of-contents a:hover {
+  color: black;
+}
+
+#table-of-contents ul {
+  padding: 0;
+  list-style-type: none;
+  /* you could also change the type of bullet with the above declaration! */
+}
+
+#footnote {
+  position: fixed;
+  color: black;
+  padding: 1em;
+  font-size: 30px;
+  left:1em;
+  bottom:0px;
+  width:100%;
+}
+
+#footnote a {
+  color: Black;
+  text-decoration: none;
+}
+
+#footnote {
+  padding: 0;
+  list-style-type: none;
+  /* you could also change the type of bullet with the above declaration! */
+}
+
+#footnote ul {
+  padding: 0;
+  list-style-type: none;
+  /* you could also change the type of bullet with the above declaration! */
+}
+
+*::selection {
+  background: blue;
+  color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+#container {
+  max-width: 900px;
+  margin-left: 40%;
+}
+
+#questions {
+  color: black;
+  padding-left: 2em;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0000FF;
+}
+
+.tooltip {
+  width: 100%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  margin-left: 0px;
+  width: 300px;
+  background-color: white;
+  color: black;
+  text-align: left;
+  border-radius: 2px;
+  padding: 5px;
+  padding-top: 20px;
+/* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.tooltip .tooltiptext {
