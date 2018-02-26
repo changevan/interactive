@@ -1,0 +1,33 @@
+div {
+  position: fixed;
+  width: 33.333%;
+  bottom: 0;
+  top:0;
+}
+
+#column-one {
+  /* background: yellow; */
+  left: 0;
+}
+
+#column-two {
+  /* background: lime; */
+  left: 33.333%;
+}
+
+#column-three {
+  /* background: blue; */
+  right: 0;
+}
+
+#play {
+  position: fixed;
+  bottom: 75px;
+  left: 75px;
+}
+
+#repeat {
+  position: fixed;
+  bottom: 75px;
+  right: 75px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Title title title</title>
+   <meta charset="utf-8">
+ </head>
+
+ <body>
+   Content content content
+   <!-- JavaScript goes right before the the body ends! -->
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script type="text/javascript">
+      //var name = "Matt";
+      //var year = "2018";
+      //var introduction = "Hi, I'm " + name + ", and I graduate in " + year;
+     //console.log(introduction);
+
+     // function hello(person) {
+     //   var greeting = "Hello " + person + "! It's ";
+     //   var date = new Date ();
+     //
+     //   alert(greeting + date);
+     // }
+     //
+     //
+     //
+     // hello("Matt");
+     // hello("Laurel");
+     // hello("Evan");
+
+
+    $(document).ready(function(){
+      var size = Math.floor(Math.random() * 72) +1;
+      var units = "px";
+      var fontSize = size + units;
+
+
+
+
+      console.log("font-size: " + fontSize);
+      $("body"). css("font-size", fontSize);
+
+    });
+
+  </script>
+ </body>
+</html>
