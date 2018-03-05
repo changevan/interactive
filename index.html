@@ -9,6 +9,7 @@
   </head>
 
   <body>
+
     <header>
       <h1>Evan’s class website</h1>
       <a href="about.html">About</a>
@@ -59,43 +60,12 @@
       </ul>
     </div>
 
-    <table border="1" class="webring">
-        <tr>
-          <td colspan="2">
-            <a href="http://spring2018-yale.veryinteractive.net">
-              <img src="http://www.spring2018-yale.veryinteractive.net/content/house-field-tall.png" width="200"><br>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td align="center" width="50%">
-          <a href="https://kylabirgitta.github.io/interactive/">Previous</a>
-          </td>
-          <td align="center" width="50%">
-          <a href="https://mariacandanoza.github.io/interactive/">Next</a>
-          </td>
-      </table>
-      <script src="js/jquery.min.js">
-      <script type="text/javascript">
-      <div id = "button">
-      Random
-      </div>
-      $(document).ready(function()){
-        $('#button').click(function)(){
-          console.log('you clicked the button')
-          var red = "";
-          var green = "";
-          var blue = "";
+    <div id="webring">
+      <a href="https://kylabirgitta.github.io/interactive/" class="previous">Previous</a>
+      <a href="http://spring2018-yale.veryinteractive.net" class="home">Home</a>
+      <a href="https://mariacandanoza.github.io/interactive/" class="next">Next</a>
+    </div>
 
-          var rgb = "rgb (" + red + "," + green + "," + blue + ")"
-
-          $("body").css("background-color", red + green + blue")";
-}
-      </div>
-    }
-
-      </script>
-      </script>
   </body>
 
 </html>
