@@ -1,0 +1,469 @@
+body, html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  transition: all 300ms ease-in;
+}
+
+body.on {
+  background: white;
+}
+
+body.off {
+  background: black;
+  transition: all 300ms ease-in;
+}
+
+button {
+  position: fixed;
+  top: 5em;
+  right: 5em;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5em;
+  box-shadow: 0 0 2.25em 1em #e5e500;
+  width: 150px;
+	height: 150px;
+	background: yellow;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+button.off {
+  background: black;
+  box-shadow: 0 0 2.25em 1em white;
+
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 300px solid 	#F4A460;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+}
+
+#orb {
+  background: #d4ebf2;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  bottom: 15vh;
+  left: 33vw;
+  transition: all 300ms ease-in;
+  cursor: zoom-in;
+  pointer-events: none;
+}
+
+#air {
+  position: absolute;
+  top: 14px;
+  left: 200px;
+  width: 150px;
+  height: 75px;
+  background: #f3fafe;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 50px;
+  border-radius: 100px / 50px;
+
+}
+
+#branch-one {
+  height: 200px;
+  border-left: 11px solid #654321;
+  position: absolute;
+  bottom: 9px;
+  left: 199px;
+}
+
+#branch-two {
+  height: 130px;
+  border-left: 11px solid #654321;
+  position: absolute;
+  bottom: 121px;
+  left: 248px;
+  transform: rotate(53deg);
+}
+
+#branch-three {
+  height: 130px;
+  border-left: 11px solid #654321;
+  position: absolute;
+  bottom: 173px;
+  left: 248px;
+  transform: rotate(13deg);
+}
+
+#branch-four {
+  height: 200px;
+  border-left: 11px solid #654321;
+  position: absolute;
+  bottom: 180px;
+  left: 136px;
+  transform: rotate(-40deg);
+}
+
+#branch-five {
+  height: 260px;
+  border-left: 11px solid #654321;
+  position: absolute;
+  bottom: 220px;
+  left: 248px;
+  transform: rotate(54deg);
+}
+
+#branch-six {
+  height: 160px;
+  border-left: 11px solid #654321;
+  position: absolute;
+  bottom: 321px;
+  left: 178px;
+  transform: rotate(-37deg);
+}
+
+#branch-seven {
+  height: 130px;
+  border-left: 11px solid #654321;
+  position: absolute;
+  bottom: 333px;
+  left: 368px;
+  transform: rotate(-97deg);
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+#organism {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  bottom: 168px;
+  left: 310px;
+  transition: all 300ms ease-in;
+  cursor: zoom-in;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: all;
+}
+
+#organism:hover {
+   transform: scale(2);
+}
+
+#head {
+  position: absolute;
+  top: 26px;
+  left: 11px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-right: 70px solid #FF4500;
+  border-bottom: 27px solid transparent;
+}
+
+#eye {
+  position: absolute;
+  top: 2px;
+  left: 32px;
+  width: 5px;
+  height: 5px;
+  background: black;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+#feeler {
+  width: 2.5em;
+  height: 5.5em;
+  border-radius: 50%;
+  border-left: 1px solid black;
+  position: absolute;
+  left: -38px;
+  top: -57px;
+  transform: rotate(-68deg);
+}
+
+#body-one {
+  position: absolute;
+  top: 44px;
+  right: 63px;
+  border-bottom: 23px solid #FF4500;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  height: 0;
+  width: 23px;
+  transform: rotate(210deg);
+}
+
+#body-two {
+  position: absolute;
+  top: 76px;
+  right: 55px;
+  border-bottom: 25px solid #FF4500;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 23px;
+  transform: rotate(251deg);
+}
+
+#body-three {
+  position: absolute;
+  top: 104px;
+  right: 68px;
+  border-bottom: 25px solid #FF4500;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 23px;
+  transform: rotate(306deg);
+}
+
+#body-four {
+  position: absolute;
+  top: 104px;
+  right: 68px;
+  border-bottom: 25px solid	#FF4500;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 23px;
+  transform: rotate(506deg);
+}
+
+#alge-one {
+  position: absolute;
+  top: 102px;
+  left: 152px;
+  width: 30px;
+  height: 30px;
+  background: #32CD32;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  filter: blur(2px);
+}
+
+#alge-two {
+  position: absolute;
+  top: 122px;
+  left: 302px;
+  width: 35px;
+  height: 35px;
+  background: #32CD32;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  filter: blur(2px);
+}
+
+#alge-three {
+  position: absolute;
+  top: 202px;
+  left: 243px;
+  width: 20px;
+  height: 20px;
+  background: #32CD32;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  filter: blur(2px);
+}
+
+#alge-four {
+  position: absolute;
+  top: 322px;
+  left: 181px;
+  width: 40px;
+  height: 40px;
+  background: #32CD32;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  filter: blur(2px);
+}
+
+#alge-five {
+  position: absolute;
+  top: 256px;
+  left: 131px;
+  width: 20px;
+  height: 20px;
+  background: #32CD32;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  filter: blur(2px);
+}
+
+#alge-six {
+  position: absolute;
+  top: 306px;
+  left: 251px;
+  width: 20px;
+  height: 20px;
+  background: #32CD32;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  filter: blur(2px);
+}
+
+
+/* NIGHT MODE */
+
+body.off #ground {
+  background: black;
+  border-bottom: 300px solid #382512;
+}
+
+body.off #organism {
+  background: transparent;
+}
+
+/* body.off #organism {
+  background: black;
+} */
+
+body.off #head {
+  border-top: 9px solid transparent;
+  border-right: 70px solid grey;
+  border-bottom: 27px solid transparent;
+}
+
+body.off #body-one {
+  border-bottom: 23px solid grey;
+}
+
+body.off #body-two{
+  border-bottom: 23px solid grey;
+}
+
+body.off #body-three {
+  border-bottom: 23px solid grey;
+}
+
+body.off #body-four {
+  border-bottom: 23px solid grey;
+}
+
+body.off #orb {
+  background: #000059;
+}
+
+body.off #air {
+  background: #000073;
+}
+
+body.off #branch-one {
+  border-left: 11px solid #382512;
+}
+
+body.off #branch-two {
+  border-left: 11px solid #382512;
+}
+
+body.off #branch-three {
+  border-left: 11px solid #382512;
+}
+
+body.off #branch-four {
+  border-left: 11px solid #382512;
+}
+
+body.off #branch-five {
+  border-left: 11px solid #382512;
+}
+
+body.off #branch-six {
+  border-left: 11px solid #382512;
+}
+
+body.off #branch-seven {
+  border-left: 11px solid #382512;
+}
+
+body.off #branch-eight {
+  border-left: 11px solid #382512;
+}
+
+body.off #alge-one {
+  background: transparent;
+}
+
+body.off #alge-two {
+  background: transparent;
+}
+
+body.off #alge-three {
+  background: transparent;
+}
+
+body.off #alge-four {
+  background: transparent;
+}
+
+body.off #alge-five {
+  background: transparent;
+}
+
+body.off #alge-six {
+  background: transparent;
+}
+
+/* -webkit-animation: pulse 5s linear 1s infinite; */
+@keyframes float {
+  0% {
+    padding-top: 0;
+  }
+  50% {
+    padding-top: 20px;
+  }
+  100% {
+    padding-top: 0;
+  }
+}
+body.off #eye {
+  height: 10px;
+  border-left: 1px;
+  position: absolute;
+  top: 0.9px;
+  left: 35px;
+  transform: rotate(90deg);
+}
+
+
+body.off #organism {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    bottom: 168px;
+    left: 310px;
+    transition: all 300ms ease-in;
+    cursor: zoom-in;
+    animation: float 6s ease-in-out infinite;
+    transition: transform .2s;
+  }

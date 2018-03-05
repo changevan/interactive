@@ -41,7 +41,6 @@
       console.log(sounds[columnone]);
       console.log(sounds[columntwo]);
       console.log(sounds[columnthree]);
-
       $("#sound1").html("<source src=sounds/" + sounds[columnone] + " type='audio/mpeg'>");
       $("#sound2").html("<source src=sounds/" + sounds[columntwo] + " type='audio/mpeg'>");
       $("#sound3").html("<source src=sounds/" + sounds[columnthree] + " type='audio/mpeg'>");
@@ -49,7 +48,6 @@
       $("#sound1")[0].load();
       $("#sound2")[0].load();
       $("#sound3")[0].load();
-
       $("#sound1")[0].play();
       $("#sound2")[0].play();
       $("#sound3")[0].play();
@@ -60,20 +58,16 @@
       $("#sound2")[0].play();
       $("#sound3")[0].play();
     }
-
-    // Generate the random colors when the page loads
+    
+    // Generate the random sounds when the page loads
     generateSounds();
     // Buttom click event
     $('#next').click(function(){
       generateSounds();
     });
-
     $('#repeat').click(function(){
       replay();
     });
-
-
-
   });
   </script>
 
