@@ -1,40 +1,48 @@
 $(document).ready(function(){
 
-  function rotate() {
+  function skew() {
     var width = Math.floor(window.innerWidth);
     var height = Math.floor(window.innerHeight);
-    var x = width/-20 + "deg";
-    var y = width/50 + "deg";
-    var w = width/50 + "deg";
-    $('.left-one').css('transform', 'rotate(' + x + ')');
-    $('.left-two').css('transform', 'rotate(' + y + ')');
-    $('.right-one').css('transform', 'rotate(' + w + ')');
-
+    var x = width/20 + "deg";
+    var y = width/30 + "deg";
+    var w = width/40 + "deg";
+    var z = width/20 + "deg";
+    $('.left-one').css('transform', 'skew(' + x + ')');
+    $('.left-two').css('transform', 'skew(' + y + ')');
+    $('.right-one').css('transform', 'skew(' + w + ')');
+    $('.right-two').css('transform', 'skew(' + z + ')');
   }
 
     $(window).resize(function(){
-      rotate();
+      skew();
     });
 
 });
-//
-//
-// $(document).ready(function() {
-//
-//   function fontSize() {
-//     width = Math.floor(window.innerWidth);
-//     height = Math.floor(window.innerHeight);
-//     $("#width").html(width);
-//     $("#height").html(height);
-//     $("#width").css("font-size", width/3.3 + 'px');
-//     $("#height").css("font-size", height/4.3 + 'px');
-//   }
-//
-//
-//   $(window).resize(function() {
-//   	fontSize();
-//   });
-//
-//   fontSize();
-//
-// });
+
+$('.letters').each(function() {
+
+  var $letterWrapper = $(this);
+  var words = $letterWrapper.html().split(' ');
+  var wordArray = [];
+
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+    var letters = word.split('');
+    var letterElements = letters.map(getHTMLForCharacter);
+    wordArray.push(
+    	'<div class="word">' +
+    	letterElements.join('') +
+      '</div>'
+    );
+  }
+
+  console.log(wordArray.join(getHTMLForCharacter(' ')));
+
+  $letterWrapper.html(wordArray.join(getHTMLForCharacter(' ')));
+});
+
+function getHTMLForCharacter(character) {
+    	var characterDefinition = $('.letter-definition[data-character="' + character + '"]').html();
+    	var characterHTML = '<div class="letter" data-character="' + character + '">' + characterDefinition + '</div>';
+      return characterHTML;
+};

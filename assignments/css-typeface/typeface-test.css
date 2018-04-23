@@ -1,22 +1,30 @@
-body {
-  font-size: 5px;
+/* REQUIRED CSS --- DO NOT DELETE */
+
+.letter-definition {
+	display: none;
 }
 
-hr {
-  border: solid black .5px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  /* filter: blur(5px); */
+/* CUSTOM TYPEFACE CSS --- INSERT YOUR OWN HERE */
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.space {
+	width: 50px;
+	height: 230px;
 }
 
 .letter {
-  display: inline-block;
-  vertical-align: top;
-  width: 20em;
-  height: 20em;
-  position: relative;
-  margin-right: -4em;
-  margin-bottom: 1em;
+	display: inline-block;
+	vertical-align: top;
+	width: 20em;
+	height: 20em;
+	position: relative;
+	font-size: 4.8px;
+	margin-right: -2.8em;
+	margin-bottom: 3.2em;
 }
 
 .letter-inside {
@@ -26,6 +34,7 @@ hr {
   align-items: center;
   justify-content: center;
 }
+
 
 .a .left-one {
   background: black;
@@ -1118,7 +1127,7 @@ hr {
   background: black;
   width: .2em;
   position: absolute;
-  left: 9.8em;
+  /* left: 4.8em; */
   /* right: 7.2em; */
   top: -0.8em;
   bottom: 1.3em;
@@ -1589,25 +1598,25 @@ hr {
 }
 
 .comma .left-one {
-  background: black;
-  width: .2em;
-  position: absolute;
-  left: 9.3em;
-  /* top: 7em; */
-  bottom: 3.6em;
-  transform: rotate(194deg);
-  height: 2em;
+	background: black;
+	width: .4em;
+	position: absolute;
+	left: 9.3em;
+	/* top: 7em; */
+	bottom: -0.4em;
+	transform: rotate(194deg);
+	height: 2em;
 }
 
 .period .left-one {
-  background: black;
-  width: .2em;
-  position: absolute;
-  left: 9.3em;
-  /* top: 7em; */
-  bottom: 3.6em;
-  transform: rotate(5deg);
-  height: 1em;
+	background: black;
+	width: 0.4em;
+	position: absolute;
+	left: 9.3em;
+	/* top: 7em; */
+	bottom: 0.8em;
+	transform: rotate(5deg);
+	height: 1em;
 }
 
 .semicolon .left-one {
@@ -2273,36 +2282,17 @@ hr {
   /* right: 5.3em; */
 }
 
-.dash .right-two {
-  background: black;
+._ .left-one {
+	background: black;
   width: .2em;
   position: absolute;
-  left: 10.2em;
-  top: 4.2em;
-  /* bottom: 1.5em; */
-  transform: rotate(99deg);
-  height: 16.3em;
+  left: 7.5em;
+  /* top: 0; */
+  bottom: -5em;
+  height: 13em;
+  transform: rotate(93deg);
 }
 
-.underscore .left-two {
-  background: black;
-  width: .2em;
-  position: absolute;
-  left: 10em;
-  /* top: 4.2em; */
-  bottom: -7.5em;
-  transform: rotate(89deg);
-  height: 16.3em;
-}
-
-/* .rotate-nine {
-  transform: rotate(5deg);
-} */
-
-/* .nine {
-  border-style: solid;
-  border-width: 1px;
-} */
 
 #info {
   position: fixed;
