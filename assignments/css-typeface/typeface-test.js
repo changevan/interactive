@@ -3,15 +3,29 @@ $(document).ready(function(){
   function skew() {
     var width = Math.floor(window.innerWidth);
     var height = Math.floor(window.innerHeight);
-    var x = width/20 + "deg";
-    var y = width/30 + "deg";
-    var w = width/40 + "deg";
-    var z = width/20 + "deg";
+    var x = width*20 + "deg";
+    var y = -width*30 + "deg";
+    var w = width*40 + "deg";
+    var z = width*20 + "deg";
+    var v = -width*20 + "deg";
+
     $('.left-one').css('transform', 'skew(' + x + ')');
     $('.left-two').css('transform', 'skew(' + y + ')');
     $('.right-one').css('transform', 'skew(' + w + ')');
     $('.right-two').css('transform', 'skew(' + z + ')');
+    $('.right-three').css('transform', 'skew(' + z + ')');
+    $('.right-four').css('transform', 'skew(' + v + ')');
+    $('.top-one').css('transform', 'skew(' + x + ')');
+    $('.top-two').css('transform', 'skew(' + y + ')');
+    $('.middle').css('transform', 'skew(' + v + ')');
+    $('.bottom').css('transform', 'skew(' + z + ')');
+
   }
+
+  console.log("width is: " + window.innerWidth);
+  console.log("height is: " + window.innerHeight);
+
+
 
     $(window).resize(function(){
       skew();
